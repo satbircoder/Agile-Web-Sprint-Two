@@ -3,141 +3,127 @@ INSERT INTO `paintingstable` (`idPaintings`, `title`, `finished`, `media`, `arti
 (1,
 'Bal du moulin de la Galette',
 1876,
-'oil',
-'August Renoir',
+'Oil',
+1,
+'Impressionism'
 ),
 
 (2,
 'Doni Tondo (Doni Madonna)',
 1507,
-'oil',
-'Michelangelo',
-'Mannerism',
-
+'Oil',
+2,
+'Mannerism'
 ),
 
 (3,
 'Vase with Twelve Sunflowers ',
 1888,
-'oil',
-'Vincent Van Gogh',
-'Still-life',
-
+'Oil',
+3,
+'Still-life'
 ),
 
 (4,
 'Mona Lisa',
 1503,
-'oil',
-'Leonardo da Vinci',
-'Portrait',
-
+'Oil',
+10,
+'Portrait'
 ),
 
 (5,
 'The Potato Eaters',
 1885,
-'oil',
-'Vincent Van Gogh',
-'Realism',
-
+'Oil',
+3,
+'Realism'
 ),
 
 (6,
 'Sunrise',
 1972,
-'oil',
-'Claude Monet',
-'Impressionism',
-
+'Oil',
+4,
+'Impressionism'
 ),
 
 (7,
 'Weaver',
 1884,
-'oil',
-'Vaincent Van Gogh',
-'Realism',
-
+'Oil',
+3,
+'Realism'
 ),
 
 (8,
 'Nature morte au compotier',
 1914,
-'oil',
-'Pablo Picasso',
-'Cubism',
-
+'Oil',
+6,
+'Cubism'
 ),
 
 (9,
 'Houses Of Parliament',
 1889,
-'oil',
-'Claude Monet',
-'Impressionism',
-
+'Oil',
+4,
+'Impressionism'
 ),
 
 (10,
 'Cafe Terrace at Night',
 1888,
-'oil',
-'Vincent Van Gogh',
-'Impressionism',
-
+'Oil',
+3,
+'Impressionism'
 ),
 
 (11,
 'At the Lapin Agile',
 1905,
-'oil',
-'Pablo Picasso',
-'Impressionism',
-
+'Oil',
+6,
+'Impressionism'
 ),
 
 (12,
 'The Persistence of Memory',
 1931,
-'oil',
-'Salvador Dali',
-'Surrealism',
-
+'Oil',
+8,
+'Surrealism'
 ),
 
 (13,
 'The Hallucinogenic Toreador',
 1970,
-'oil',
-'Salvador Dali',
-'Surrealism',
-
+'Oil',
+8,
+'Surrealism'
 ),
 
 (14,
 'Jaz de Bouffan',
 1877,
-'oil',
-'Paul Cezanne',
-'Impressionism',
-
+'Oil',
+9,
+'Impressionism'
 ),
 
 (15,
 'Vitruvian Man',
 1490,
-'pen-ink',
-'Leanardo da Vinci',
-'Realism',
-
+'Pen-ink',
+10,
+'Realism'
 ),
 
 (16,
 'The Kingfisher',
 1886,
-'pen-ink',
-'Vincent Van Gogh',
-'Realism',
-
+'Pen-ink',
+3,
+'Realism'
 );

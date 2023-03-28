@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2023 at 08:29 AM
+-- Generation Time: Mar 28, 2023 at 12:31 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `artisttable` (
-  `idArtist` int(11) UNSIGNED NOT NULL,
-  `artistName` varchar(100) NOT NULL,
-  `artistBirth` year(4) NOT NULL,
-  `artistDeath` year(4) NOT NULL,
+  `idArtist` int(11) NOT NULL,
+  `artistName` text NOT NULL,
+  `artistBirth` int NOT NULL,
+  `artistDeath` int NOT NULL,
+  `artistNationality` text NOT NULL,
   `imageArtist` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -44,9 +45,9 @@ CREATE TABLE `artisttable` (
 CREATE TABLE `paintingstable` (
   `idPaintings` int(11) NOT NULL,
   `title` text NOT NULL,
-  `finished` year(4) NOT NULL,
+  `finished` int NOT NULL,
   `media` text NOT NULL,
-  `artistFK` varchar(100) NOT NULL,
+  `artistFK` int(11) NOT NULL,
   `style` text NOT NULL,
   `imagePaintings` mediumblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -59,15 +60,13 @@ CREATE TABLE `paintingstable` (
 -- Indexes for table `artisttable`
 --
 ALTER TABLE `artisttable`
-  ADD PRIMARY KEY (`idArtist`),
-  ADD UNIQUE KEY `artistName` (`artistName`);
+  ADD PRIMARY KEY (`idArtist`);
 
 --
 -- Indexes for table `paintingstable`
 --
 ALTER TABLE `paintingstable`
-  ADD PRIMARY KEY (`idPaintings`),
-  ADD KEY `artistFKIndex` (`artistFK`);
+  ADD KEY `FK_artistName` (`artistFK`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -77,13 +76,7 @@ ALTER TABLE `paintingstable`
 -- AUTO_INCREMENT for table `artisttable`
 --
 ALTER TABLE `artisttable`
-  MODIFY `idArtist` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `paintingstable`
---
-ALTER TABLE `paintingstable`
-  MODIFY `idPaintings` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idArtist` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -93,7 +86,7 @@ ALTER TABLE `paintingstable`
 -- Constraints for table `paintingstable`
 --
 ALTER TABLE `paintingstable`
-  ADD CONSTRAINT `artistFKIndex` FOREIGN KEY (`artistFK`) REFERENCES `artisttable` (`artistName`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_artistName` FOREIGN KEY (`artistFK`) REFERENCES `artisttable` (`idArtist`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

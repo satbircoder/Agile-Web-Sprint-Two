@@ -38,17 +38,17 @@ CREATE TABLE `artisttable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `artisttable` (`idArtist`, `artistName`, `artistBirth`, `artistDeath`, `artistCentury`, `artistNationality`, `imageArtist`) VALUES
-(1, 'August Renoir', 1841, 1919, 20, 'French', ''),
-(2, 'Michelangelo', 1475, 1564, 16, 'Italian', ''),
-(3, 'Vincent Van Gogh', 1853, 1890, 19, 'Dutch', ''),
-(4, 'Claude Monet', 1840, 1926, 20, 'French', ''),
-(5, 'Rembrandt', 1606, 1699, 17, 'Dutch', ''),
-(6, 'Pablo Picasso', 1881, 1973, 20, 'Spanish', ''),
-(7, 'Jan Vermeer', 1632, 1675, 17, 'Dutch', ''),
-(8, 'Salvador Dali', 1904, 1989, 20, 'Spanish', ''),
-(9, 'Paul Cezanne', 1839, 1906, 20, 'French', ''),
-(10, 'Leanardo da Vinci', 1452, 1519, 16, 'Italian', ''),
-(11, 'Raphael', 1483, 1520, 16, 'Italian', '');
+(1, 'August Renoir', 1841, 1919, 20, 'French', LOAD_FILE('C:\\Temp\\png_500_wide\\renoir.png')),
+(2, 'Michelangelo', 1475, 1564, 16, 'Italian', LOAD_FILE('C:\\Temp\\png_500_wide\\michelangelo.png')),
+(3, 'Vincent Van Gogh', 1853, 1890, 19, 'Dutch', LOAD_FILE('C:\\Temp\\png_500_wide\\vangogh.png')),
+(4, 'Claude Monet', 1840, 1926, 20, 'French', LOAD_FILE('C:\\Temp\\png_500_wide\\monet.png')),
+(5, 'Rembrandt', 1606, 1699, 17, 'Dutch', LOAD_FILE('C:\\Temp\\png_500_wide\\rembrandt.png')),
+(6, 'Pablo Picasso', 1881, 1973, 20, 'Spanish', LOAD_FILE('C:\\Temp\\png_500_wide\\picasso.png')),
+(7, 'Jan Vermeer', 1632, 1675, 17, 'Dutch', LOAD_FILE('C:\\Temp\\png_500_wide\\vermeer.png')),
+(8, 'Salvador Dali', 1904, 1989, 20, 'Spanish', LOAD_FILE('C:\\Temp\\png_500_wide\\dali.png')),
+(9, 'Paul Cezanne', 1839, 1906, 20, 'French', LOAD_FILE('C:\\Temp\\png_500_wide\\cezanne.png')),
+(10, 'Leanardo da Vinci', 1452, 1519, 16, 'Italian', LOAD_FILE('C:\\Temp\\png_500_wide\\davinci.png')),
+(11, 'Raphael', 1483, 1520, 16, 'Italian', LOAD_FILE('C:\\Temp\\png_500_wide\\raphael.png'));
 
 CREATE TABLE `paintingstable` (
   `idPaintings` int(11) NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `paintingstable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `paintingstable` (`idPaintings`, `title`, `finished`, `media`, `artistFK`, `style`, `imagePaintings`) VALUES
-(1, 'Bal du moulin de la Galette', 1876, 'Oil', 1, 'Impressionism', ''),
+(1, 'Bal du moulin de la Galette', 1876, 'Oil', 1, 'Impressionism', LOAD_FILE('C:\\1738.jpg')),
 (2, 'Doni Tondo (Doni Madonna)', 1507, 'Oil', 2, 'Mannerism', ''),
 (3, 'Vase with Twelve Sunflowers ', 1888, 'Oil', 3, 'Still-life', ''),
 (4, 'Mona Lisa', 1503, 'Oil', 10, 'Portrait', ''),

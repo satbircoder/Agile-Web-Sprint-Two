@@ -5,15 +5,15 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			$type1=$_POST['idPaintings'];
+			$type1=$_POST['id'];
 			$type2=$_POST['title'];
 			$type3=$_POST['finished'];
 			$type4=$_POST['media'];
-			$type5=$_POST['artistFK'];
+			$type5=$_POST['artist'];
 			$type6=$_POST['style'];
 			$photo= fopen($_FILES[image][tmp_name], 'rb');
-			$query="INSERT INTO paintingstable (idPaintings, title, finished, media, artistFK, style, imagePaintings)
-    		Values (:id, :title, :finished, :media, :artist, :style, :image1)";
+			$query="Insert Into paintings (id, title, finished, media, artist, style, image)
+    		Values (:id, :title, :finished, :media, :artist, :style, :image)";
 			$step=$db->prepare($query);
 			$step->bindParam(':id',$type1,PDO::PARAM_INT, 20);
 			$step->bindParam(':title',$type2,PDO::PARAM_STR, 20);
@@ -21,7 +21,7 @@
 			$step->bindParam(':media',$type4,PDO::PARAM_STR, 20);
 			$step->bindParam(':artist',$type5,PDO::PARAM_STR, 20);
 			$step->bindParam(':style',$type6,PDO::PARAM_STR, 20);
-			$step->bindParam(':image1',$photo,PDO::PARAM_LOB);
+			$step->bindParam(':image',$photo,PDO::PARAM_LOB);
 			if($step->execute()){
 				echo " Data with Image is added to newThing";
 			}

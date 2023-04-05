@@ -61,7 +61,7 @@ CREATE TABLE `paintingstable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `paintingstable` (`idPaintings`, `title`, `finished`, `media`, `artistFK`, `style`, `imagePaintings`) VALUES
-(1, 'Bal du moulin de la Galette', 1876, 'Oil', 1, 'Impressionism', LOAD_FILE('C:\\1738.jpg')),
+(1, 'Bal du moulin de la Galette', 1876, 'Oil', 1, 'Impressionism', ''),
 (2, 'Doni Tondo (Doni Madonna)', 1507, 'Oil', 2, 'Mannerism', ''),
 (3, 'Vase with Twelve Sunflowers ', 1888, 'Oil', 3, 'Still-life', ''),
 (4, 'Mona Lisa', 1503, 'Oil', 10, 'Portrait', ''),

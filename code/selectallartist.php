@@ -19,12 +19,12 @@
             foreach ($db->query($sql) as $row){
               ?>
             <tr>
-              <td><?php echo $row['idArtist'];?></td>
               <td><?php echo $row['artistName'];?></td>
               <td><?php echo $row['artistBirth'];?></td>
               <td><?php echo $row['artistDeath'];?></td>
               <td><?php echo $row['artistNationality'];?></td>
-              <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['image']) . '" width = "200px" height = "200px"/>';?></td>
+              <td><?php echo $row['artistCentury'];?></td>
+              <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>
             <?php
             }

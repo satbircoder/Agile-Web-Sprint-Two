@@ -7,14 +7,16 @@
 	</head>
 	<body class = "bg-success">
 	<?php
+    include_once('navbar.php');
+    ?>
+	<?php
 		session_start();
 		include_once('connection.php');
 
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			#$sql = "SELECT * FROM paintingstable WHERE idPaintings = '".$_GET['id']."'";
-        	$sql = "SELECT paintingstable.idPaintings,
+			$sql = "SELECT paintingstable.idPaintings,
             paintingstable.title,
             paintingstable.finished,
             paintingstable.media,
@@ -24,8 +26,7 @@
             artisttable.artistName 
             FROM paintingstable
             INNER JOIN artisttable ON paintingstable.artistFK=artisttable.idArtist
-            WHERE idPaintings = '".$_GET['id']."'
-            ";
+            WHERE idPaintings = '".$_GET['id']."'";
 	?>
 				
 		<?php

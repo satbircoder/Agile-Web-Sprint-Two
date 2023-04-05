@@ -16,7 +16,18 @@
     //$value = trim($value);
     try
     {
-      $sql = "SELECT * FROM paintingstable WHERE style = '{$value}'";
+      $sql = "SELECT paintingstable.idPaintings,
+            paintingstable.title,
+            paintingstable.finished,
+            paintingstable.media,
+            paintingstable.artistFK,
+            paintingstable.style,
+            paintingstable.imagePaintings,
+            artisttable.artistName 
+            FROM paintingstable
+            INNER JOIN artisttable ON paintingstable.artistFK=artisttable.idArtist
+            WHERE paintingstable.style = '{$value}'
+            ";
       foreach ($db->query($sql) as $row){
     ?>
     
@@ -24,9 +35,9 @@
     <td><?php echo $row['title']; ?></td>  
     <td><?php echo $row['finished'];?></td>  
     <td><?php echo $row['media'];?></td>  
-    <td><?php echo $row['artistFK'];?></td>  
+    <td><?php echo $row['artistName'];?></td>  
     <td><?php echo $row['style'];?></td>  
-    <td><?php echo '<img src = "data:Image/png;base64,' . base64_encode($row['image']) . '" width = "200px" height = "200px"/>';?></td>  
+    <td><?php echo '<img src = "data:Image/png;base64,' . base64_encode($row['imagePaintings']) . '" width = "200px" height = "200px"/>';?></td>  
     </tr>
     <?php
     }

@@ -12,13 +12,13 @@
     <script type="text/javascript">
 		$(document).ready(function(){
 			$("#main").load("selectallartist.php");
-			$("#style_dropdown").change(function(){
+			$("#nationality_dropdown").change(function(){
 				var selected=$(this).val();
-				$("#main").load("filterstyle.php",{selected_style: selected});
+				$("#main").load("filternationality.php",{selected_nationality: selected});
 			});
-            $("#artist_dropdown").change(function(){
+            $("#century_dropdown").change(function(){
 				var selected=$(this).val();
-				$("#main").load("filterartist.php",{selected_artist: selected});
+				$("#main").load("filtercentury.php",{selected_century: selected});
 			});
 			$("#refresh").click(function(){
 				$("#main").load("selectallartist.php");
@@ -33,9 +33,9 @@
     <div class="row">
   <div class="col">
   <form method = "post">
-    <label for ="styleselect" class = "control-label col-sm-6">Select by Nationallity</label>
+    <label for ="nationalityselect" class = "control-label col-sm-6">Select by Nationality</label>
     <div class = "col-sm-6">
-    <select name = "styleselect" class="form-control" id = "style_dropdown">
+    <select name = "nationalityselect" class="form-control" id = "nationality_dropdown">
         <option>----Select----</option> 
         <?php
           include_once('connection.php');
@@ -43,12 +43,14 @@
           $db = $database->open();
           try
           {
-            $sql = 'SELECT DISTINCT artistNationallity FROM artisttable';
+            $sql = 'SELECT DISTINCT artistNationality 
+            FROM artisttable
+            ORDER BY artistNationality';
             foreach ($db->query($sql) as $row){
               //echo $row['style'];
               ?>
             
-              <option value = "<?php echo $row['style'] ?>"> <?php echo $row['style'] ?></option>
+              <option value = "<?php echo $row['artistNationality'] ?>"> <?php echo $row['artistNationality'] ?></option>
           </div>
         <?php
             }
@@ -64,9 +66,9 @@
   </div>
   <div class="col">
   <form method = "post">
-    <label for ="artistselect" class = "control-label col-sm-6">Sort by Century</label>
+    <label for ="centuryselect" class = "control-label col-sm-6">Sort by Century</label>
     <div class = "col-sm-6">
-    <select name = "artistselect" class="form-control" id = "artist_dropdown">
+    <select name = "centuryselect" class="form-control" id = "century_dropdown">
         <option>----Select----</option> 
         <?php
           include_once('connection.php');
@@ -74,12 +76,14 @@
           $db = $database->open();
           try
           {
-            $sql = 'SELECT DISTINCT artistCentury FROM artisttable';
+            $sql = 'SELECT DISTINCT artistCentury
+            FROM artisttable
+            ORDER BY artistCentury';
             foreach ($db->query($sql) as $row){
               //echo $row['style'];
               ?>
             
-              <option value = "<?php echo $row['artist'] ?>"> <?php echo $row['artist'] ?></option>
+              <option value = "<?php echo $row['artistCentury'] ?>"> <?php echo $row['artistCentury'] ?></option>
           </div>
         <?php
             }

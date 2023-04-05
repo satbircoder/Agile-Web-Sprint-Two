@@ -34,7 +34,7 @@
               <td><?php echo $row['media'];?></td>
               <td><?php echo $row['artistName'];?></td>
               <td><?php echo $row['style'];?></td>
-              <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['image']) . '" width = "200px" height = "200px"/>';?></td>
+              <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imagePaintings']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>
             <?php
             }

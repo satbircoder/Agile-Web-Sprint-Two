@@ -43,7 +43,9 @@
           $db = $database->open();
           try
           {
-            $sql = 'SELECT DISTINCT style FROM paintingstable';
+            $sql = 'SELECT DISTINCT style 
+            FROM paintingstable
+            ORDER BY style';
             foreach ($db->query($sql) as $row){
               //echo $row['style'];
               ?>
@@ -74,12 +76,18 @@
           $db = $database->open();
           try
           {
-            $sql = 'SELECT DISTINCT artistFK FROM paintingstable';
+            #$sql = 'SELECT DISTINCT artistFK FROM paintingstable';
+            $sql = "SELECT DISTINCT paintingstable.artistFK,
+            artisttable.artistName 
+            FROM paintingstable
+            INNER JOIN artisttable ON paintingstable.artistFK=artisttable.idArtist
+            ORDER BY artisttable.artistName
+            ";
             foreach ($db->query($sql) as $row){
               //echo $row['style'];
               ?>
             
-              <option value = "<?php echo $row['artistFK'] ?>"> <?php echo $row['artistFK'] ?></option>
+              <option value = "<?php echo $row['artistFK'] ?>"> <?php echo $row['artistName'] ?></option>
           </div>
         <?php
             }

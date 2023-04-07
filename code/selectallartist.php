@@ -23,7 +23,7 @@
               <td><?php echo $row['artistBirth'];?></td>
               <td><?php echo $row['artistDeath'];?></td>
               <td><?php echo $row['artistNationality'];?></td>
-              <td><?php echo $row['artistCentury'];?></td>
+              <td><?php echo $row['artistCentury'];?>th</td>
               <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>
             <?php

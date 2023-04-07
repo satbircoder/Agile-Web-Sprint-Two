@@ -18,7 +18,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color:white; font-size: 20px;">
               Display Corner
@@ -34,8 +33,12 @@
 
         
           </ul>
-           <form class="d-flex w-25 p-3" action = "filtertitle.php" method = "post">
-            <input class="form-control me-2" name = "searchbox" id = "searchbox" type="search" placeholder="Search By Title" aria-label="Search">
+          <form class="d-flex w-25 p-3" action = "filtertitlepainting.php" method = "post">
+            <input class="form-control me-2" name = "searchboxpainting" id = "searchboxpainting" type="search" placeholder="Search By Painting Title" aria-label="Search">
+            <button class="btn bg-info" name = "searchbtn" type="submit" fdprocessedid="h0pjt8" style="border: black ;">Search</button>
+          </form>
+          <form class="d-flex w-25 p-3" action = "filtertitleartist.php" method = "post">
+            <input class="form-control me-2" name = "searchboxartist" id = "searchboxartist" type="search" placeholder="Search By Artist Name" aria-label="Search">
             <button class="btn bg-info" name = "searchbtn" type="submit" fdprocessedid="h0pjt8" style="border: black ;">Search</button>
           </form>
         </div>

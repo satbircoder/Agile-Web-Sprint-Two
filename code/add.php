@@ -5,14 +5,14 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			$type1=$_POST['id'];
+			$type1=$_POST['idPaintings'];
 			$type2=$_POST['title'];
 			$type3=$_POST['finished'];
 			$type4=$_POST['media'];
-			$type5=$_POST['artist'];
+			$type5=$_POST['artistFK'];
 			$type6=$_POST['style'];
 			$photo= fopen($_FILES[image][tmp_name], 'rb');
-			$query="Insert Into paintings (id, title, finished, media, artist, style, image)
+			$query="Insert Into paintingstable (idPaintings, title, finished, media, artistFK, style, image)
     		Values (:id, :title, :finished, :media, :artist, :style, :image)";
 			$step=$db->prepare($query);
 			$step->bindParam(':id',$type1,PDO::PARAM_INT, 20);

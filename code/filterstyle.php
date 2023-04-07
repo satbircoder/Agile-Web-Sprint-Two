@@ -32,7 +32,7 @@
     ?>
     
     <tr>
-    <td><?php echo $row['title']; ?></td>  
+    <td><a href = "description.php?id=<?php echo $row['idPaintings']; ?>" style="text-decoration:none; color:black;"><?php echo $row['title'];?></a></td> 
     <td><?php echo $row['finished'];?></td>  
     <td><?php echo $row['media'];?></td>  
     <td><?php echo $row['artistName'];?></td>  

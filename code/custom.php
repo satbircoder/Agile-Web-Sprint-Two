@@ -47,17 +47,20 @@ include_once('navbar.php');
 						$database = new Connection();
     					$db = $database->open();
 						try{	
-						    $sql = 'SELECT * FROM paintingstable';
+						    $sql = 'SELECT paintingstable.*,
+							artisttable.artistName 
+							FROM paintingstable
+							INNER JOIN artisttable ON paintingstable.artistFK=artisttable.idArtist';
 						    foreach ($db->query($sql) as $row) {
 						    	?>
 						    	<tr>
-						    		<td><?php echo $row['id']; ?></td>
+						    		<td><?php echo $row['idPaintings']; ?></td>
 						    		<td><?php echo $row['title']; ?></td>
 						    		<td><?php echo $row['finished']; ?></td>
 						    		<td><?php echo $row['media']; ?></td>
-						    		<td><?php echo $row['artist']; ?></td>
+						    		<td><?php echo $row['artistName']; ?></td>
 						    		<td><?php echo $row['style']; ?></td>
-									<td><?php echo '<img src = "data:Image/png;base64,'  . base64_encode($row['image']) . '" width = "200px" height = "200px"/>';?></td>
+									<td><?php echo '<img src = "data:Image/png;base64,'  . base64_encode($row['imagePaintings']) . '" width = "200px" height = "200px"/>';?></td>
 						    		<td>
 						    			<a href="#edit_<?php echo $row['id']; ?>" id="edit" class="btn btn-success btn-sm" data-toggle="modal"><span class="glyphicon glyphicon-edit"></span> Edit</a>
 						    			<a href="#delete_<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span> Delete</a>

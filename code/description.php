@@ -38,7 +38,7 @@
 					<div class= "d-flex flex-column justify-content-end" >
 
 						<h3 style="text-align:center;">Painting</h3>
-						<?php echo '<img src = "data:Image/png;base64,'  . base64_encode($row['image']) .  '"height = "500px""/>';?>
+						<?php echo '<img src = "data:Image/png;base64,'  . base64_encode($row['imagePaintings']) .  '"height = "500px""/>';?>
 					</div>    
 				</div>
 				<div class="col">

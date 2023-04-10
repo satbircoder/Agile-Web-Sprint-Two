@@ -1,0 +1,118 @@
+<mxfile host="app.diagrams.net" modified="2023-04-08T06:52:45.562Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="_hrJYQkH2Djojf6ee6bY" version="21.1.5" type="device">
+  <diagram name="Page-1" id="BjCFA0xAlESh-q33egwt">
+    <mxGraphModel dx="1272" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-1" value="HOME OR Index Page" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="420" y="50" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-2" value="Acme Arts&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="260" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xLSUVuxWMQUTcN-66tIM-4" target="xLSUVuxWMQUTcN-66tIM-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-4" value="Display" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="430" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-5" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="620" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-8" value="" style="shape=link;html=1;rounded=0;width=3;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="320" y="140" as="sourcePoint" />
+            <mxPoint x="690" y="140" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-9" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="489.5" y="110" as="sourcePoint" />
+            <mxPoint x="489.5" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-11" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="319.5" y="140" as="sourcePoint" />
+            <mxPoint x="319.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-12" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="489.5" y="140" as="sourcePoint" />
+            <mxPoint x="489.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-13" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="690" y="140" as="sourcePoint" />
+            <mxPoint x="690" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-15" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="489.5" y="230" as="sourcePoint" />
+            <mxPoint x="489.5" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-16" value="" style="shape=link;html=1;rounded=0;width=3;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="490" y="260" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-17" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="380" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-18" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="489.5" y="260" as="sourcePoint" />
+            <mxPoint x="489.5" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-19" value="Paintings Gallery" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-20" value="Artist Gallery" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="470" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-21" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="690" y="230" as="sourcePoint" />
+            <mxPoint x="690" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-22" value="" style="shape=link;html=1;rounded=0;width=3;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="690" y="260" as="sourcePoint" />
+            <mxPoint x="800" y="260" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-24" value="" style="shape=link;html=1;rounded=0;width=-4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="xLSUVuxWMQUTcN-66tIM-27">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="690" y="250" as="sourcePoint" />
+            <mxPoint x="690" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-25" value="" style="shape=link;html=1;rounded=0;width=-4;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="800" y="260" as="sourcePoint" />
+            <mxPoint x="800" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-27" value="Edit Paintings Details" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="630" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xLSUVuxWMQUTcN-66tIM-28" value="edit Artist&#39;s Details" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6AFF4D;" vertex="1" parent="1">
+          <mxGeometry x="770" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

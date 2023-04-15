@@ -6,7 +6,7 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			$sql = "DELETE FROM paintingstable WHERE id = '".$_GET['id']."'";
+			$sql = "DELETE FROM paintingstable WHERE idPaintings = '".$_GET['id']."'";
 			//if-else statement in executing our query
 			$_SESSION['message'] = ( $db->exec($sql) ) ? 'Paintings deleted successfully' : 'Something went wrong. Cannot delete paintings';
 		}
@@ -22,4 +22,3 @@
 		$_SESSION['message'] = 'Select paintings to delete first';
 	}
 	header('location: custom.php');
-?>

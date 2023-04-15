@@ -1,11 +1,9 @@
 <table class="table bg-success" style="margin-top:20px;">
 				<thead>
+                <th>Name</th>
+                <th>Lifespan</th>
+                <th>Nationality</th>
                 <th>Artist</th>
-                <th>Date of Birth</th>
-                <th>Date of Death</th>
-                <th>Nationallity</th>
-                <th>Century</th>
-                <th></th>
 				</thead>
 				<tbody>
 <?php
@@ -14,16 +12,13 @@
           $db = $database->open();
           try
           {
-            $sql = "SELECT * FROM artisttable
-            ";
+            $sql = 'SELECT * FROM artisttable';
             foreach ($db->query($sql) as $row){
               ?>
             <tr>
-              <td><?php echo $row['artistName'];?></td>
-              <td><?php echo $row['artistBirth'];?></td>
-              <td><?php echo $row['artistDeath'];?></td>
+              <td><a href = "descriptionartist.php?idArtist=<?php echo $row['idArtist']; ?>" style="text-decoration:none; color:black;"><?php echo $row['artistName'];?></a></td>
+              <td><?php echo $row['artistBirth'];?> - <?php echo $row['artistDeath'];?></td>
               <td><?php echo $row['artistNationality'];?></td>
-              <td><?php echo $row['artistCentury'];?>th</td>
               <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>
             <?php

@@ -1,12 +1,14 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>PHP CRUD Operation using PDO with Bootstrap/Modal1</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	</head>
-	<body class = "bg-success">
-	<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <title>ACME ARTS - HOME PAGE</title>
+</head>
+<body style = "background:lightgray;">
+<?php
     include_once('navbar.php');
     ?>
 	<?php
@@ -28,7 +30,6 @@
             INNER JOIN artisttable ON paintingstable.artistFK=artisttable.idArtist
             WHERE idPaintings = '".$_GET['id']."'";
 	?>
-				
 		<?php
 			foreach ($db->query($sql) as $row) {
 		?>
@@ -81,4 +82,12 @@
 		<script src="jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</body>
+</html>
+
+
+
+
+
+<script src = "js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

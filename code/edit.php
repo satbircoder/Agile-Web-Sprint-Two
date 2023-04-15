@@ -1,55 +1,65 @@
-<?php
+<?php  
 	session_start();
 	include_once('connection.php');
 
 	if(isset($_POST['edit'])){
 		$database = new Connection();
 		$db = $database->open();
+       
 		try{
-			$type1=$_POST['id'];
-			$type2=$_POST['title'];
-			$type3=$_POST['finished'];
-			$type4=$_POST['media'];
-			$type5=$_POST['artist'];
-			$type6=$_POST['style'];
-			$photo= fopen($_FILES[image][tmp_name], 'rb');
-
-			$sql = "UPDATE paintingstable
-            SET id = ':id',
-            title = ':title',
-            finished = ':finished',
-            media = ':media',
-            artist = ':artist',
-            style = ':style',
-            image = ':image'
-            WHERE id = ':id'";
-			$step=$db->prepare($sql);
-			$step->bindParam(':id',$type1,PDO::PARAM_INT, 20);
-			$step->bindParam(':title',$type2,PDO::PARAM_STR, 20);
-			$step->bindParam(':finished',$type3,PDO::PARAM_INT, 20);
-			$step->bindParam(':media',$type4,PDO::PARAM_STR, 20);
-			$step->bindParam(':artist',$type5,PDO::PARAM_STR, 20);
-			$step->bindParam(':style',$type6,PDO::PARAM_STR, 20);
-			$step->bindParam(':image',$photo,PDO::PARAM_LOB);
-			if($step->execute()){
-				echo " Data has been updated";
+            $id = $_GET['idPaintings'];
+			$title = $_POST['title'];
+			$finished = $_POST['finished'];
+			$media = $_POST['media'];
+			$artistFK = $_POST['artistFK'];
+			$style = $_POST['style'];
+			#$photo= fopen();
+			#$photo != null
+			if(!(isset($_FILES['imagePaintings']))){
+				echo "MEssage";
+				$photo= fopen($_FILES['imagePaintings']['tmp_name'], 'rb');
+				$sql = "UPDATE paintingstable SET title = :title, finished = :finished, media = :media, artistFK = :artistFK, style = :style, imagePaintings = :imagePaintings WHERE idPaintings = '$id'";
+				//if-else statement in executing our query
+				$step=$db->prepare($sql);
+				$step->bindParam(':title',$title,PDO::PARAM_STR, 20);
+				$step->bindParam(':finished',$finished,PDO::PARAM_INT, 20);
+				$step->bindParam(':media',$media,PDO::PARAM_STR, 20);
+				$step->bindParam(':artistFK',$artistFK,PDO::PARAM_STR, 20);
+				$step->bindParam(':style',$style,PDO::PARAM_STR, 20);
+				$step->bindParam(':imagePaintings',$photo,PDO::PARAM_LOB);
+				if($step->execute()){
+				   $_SESSION['message'] = 'Paintings details updated as requested successfully';
+				}
+				else{
+				$_SESSION['message']  = 'Not able to add data please contact Admin ';
+			}
 			}
 			else{
-			echo " Not able to update data please contact Admin ";
+				$sql = "UPDATE paintingstable SET title = :title, finished = :finished, media = :media, artistFK = :artistFK, style = :style WHERE idPaintings = '$id'";
+				//if-else statement in executing our query
+				$step=$db->prepare($sql);
+				$step->bindParam(':title',$title,PDO::PARAM_STR, 20);
+				$step->bindParam(':finished',$finished,PDO::PARAM_INT, 20);
+				$step->bindParam(':media',$media,PDO::PARAM_STR, 20);
+				$step->bindParam(':artistFK',$artistFK,PDO::PARAM_STR, 20);
+				$step->bindParam(':style',$style,PDO::PARAM_STR, 20);
+				if($step->execute()){
+				   $_SESSION['message'] = 'Paintings details updated as requested successfully';
 				}
+				else{
+				$_SESSION['message']  = 'Not able to add data please contact Admin ';
+			}
+			}
 			
-		}
-		catch(PDOException $e){
-			$_SESSION['message'] = $e->getMessage();
-		}
-
-		//close connection
-		$database->close();
-	}
+     }
+        catch(PDOException $e){
+        $_SESSION['message'] = $e->getMessage();
+        }
+    }
 	else{
 		$_SESSION['message'] = 'Fill up update details first';
 	}
 
 	header('location: custom.php');
 
-?>
+?> 

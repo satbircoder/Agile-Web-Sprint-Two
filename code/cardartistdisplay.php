@@ -40,8 +40,12 @@
             .card {
                 height: 500px;
                 width: 350px;
+                position: relative;
                 transition: transform 1500ms;
+                border-radius: 2rem;
+                box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
                 transform-style: preserve-3d;
+                perspective: 800px;
             }
 
             .front,
@@ -49,10 +53,15 @@
                 height: 100%;
                 width: 100%;
                 backface-visibility: hidden;
+                position: absolute;
             }
 
             .back {
                 transform: rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-items: center;
             }
         </style>
     </head>
@@ -65,15 +74,14 @@
             $sql = 'SELECT * FROM artisttable';
             foreach ($db->query($sql) as $row){
         ?>
-            <!--<div class="card"><?php #echo $row['artistName'];?></div> -->
             <div class="container">
                 <div class="card">
                     <div class="front"><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "100%" height = "100%"/>';?></div>
                     <div class="back">
-                        <?php echo $row['artistName'];?>
+                        <?php echo $row['artistName'];?><br>
                         <?php echo $row['artistBirth'];?> -
-                        <?php echo $row['artistDeath'];?>
-                        <?php echo $row['artistCentury'];?>th
+                        <?php echo $row['artistDeath'];?><br>
+                        <?php echo $row['artistCentury'];?>th Century<br>
                         <?php echo $row['artistNationality'];?>
                     </div>
                 </div>

@@ -20,9 +20,9 @@
                 align-items: center;
             }
 
-            .card {
+            .container {
                 width: 100vw;
-                height: 100vh;
+                height: 110vh;
                 background-color: rgb(20, 50, 100);
                 color: white;
                 display: flex;
@@ -30,6 +30,29 @@
                 align-items: center;
                 position: sticky;
                 top: 0;
+            }
+
+            .card:hover {
+                cursor: pointer;
+                transform: rotateY(180deg);
+            }
+
+            .card {
+                height: 500px;
+                width: 350px;
+                transition: transform 1500ms;
+                transform-style: preserve-3d;
+            }
+
+            .front,
+            .back {
+                height: 100%;
+                width: 100%;
+                backface-visibility: hidden;
+            }
+
+            .back {
+                transform: rotateY(180deg);
             }
         </style>
     </head>
@@ -42,9 +65,19 @@
             $sql = 'SELECT * FROM artisttable';
             foreach ($db->query($sql) as $row){
         ?>
-        <div class="card"><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "40%" height = "40%"/>';?><?php echo $row['artistName'];?></div>
-
-        
+            <!--<div class="card"><?php #echo $row['artistName'];?></div> -->
+            <div class="container">
+                <div class="card">
+                    <div class="front"><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "100%" height = "100%"/>';?></div>
+                    <div class="back">
+                        <?php echo $row['artistName'];?>
+                        <?php echo $row['artistBirth'];?> -
+                        <?php echo $row['artistDeath'];?>
+                        <?php echo $row['artistCentury'];?>th
+                        <?php echo $row['artistNationality'];?>
+                    </div>
+                </div>
+            </div>
         <?php
         }
             $database->close();

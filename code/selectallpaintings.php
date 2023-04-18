@@ -26,7 +26,7 @@
               <td><a href = "description.php?id=<?php echo $row['idPaintings']; ?>" style="text-decoration:none; color:black;"><?php echo $row['title'];?></a></td>
               <td><?php echo $row['finished'];?></td>
               <td><?php echo $row['media'];?></td>
-              <td><a href = "descriptionartist.php?idArtist=<?php echo $row['artistFK']; ?>" style="text-decoration:none; color:black;"><?php echo $row['artistName'];?></td>
+              <td><a href = "descriptionartist.php?idArtist=<?php echo $row['artistFK']; ?>" style="text-decoration:none; color:black;"><?php echo $row['artistName'];?></a></td>
               <td><?php echo $row['style'];?></td>
               <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imagePaintings']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>

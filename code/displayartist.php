@@ -95,7 +95,7 @@ include_once('navbar.php');
           $database->close();
           ?>
           </select>
-          <button type="button" name="refresh" id="refreshArtist" class="btn btn-primary">Refresh</button>
+          <button type="button" name="refresh" id="refreshArtist" class="btn btn-primary"  onClick="window.location.reload();">Refresh</button>
           </form>
            
             

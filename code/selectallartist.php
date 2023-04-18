@@ -2,6 +2,7 @@
 				<thead>
                 <th>Name</th>
                 <th>Lifespan</th>
+                <th>Century</th>
                 <th>Nationality</th>
                 <th>Artist</th>
 				</thead>
@@ -18,6 +19,7 @@
             <tr>
               <td><a href = "descriptionartist.php?idArtist=<?php echo $row['idArtist']; ?>" style="text-decoration:none; color:black;"><?php echo $row['artistName'];?></a></td>
               <td><?php echo $row['artistBirth'];?> - <?php echo $row['artistDeath'];?></td>
+              <td><?php echo $row['artistCentury'];?></td>
               <td><?php echo $row['artistNationality'];?></td>
               <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
             </tr>

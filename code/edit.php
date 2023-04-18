@@ -15,8 +15,8 @@
 			$style = $_POST['style'];
 			#$photo= fopen();
 			#$photo != null
-			if(!(isset($_FILES['imagePaintings']))){
-				echo "MEssage";
+			if(!($_FILES['imageimagePaintingsArtist']['error'] == 4 || ($_FILES['imagePaintings']['size'] == 0 && $_FILES['imagePaintings']['error'] == 0))){
+				echo "Message";
 				$photo= fopen($_FILES['imagePaintings']['tmp_name'], 'rb');
 				$sql = "UPDATE paintingstable SET title = :title, finished = :finished, media = :media, artistFK = :artistFK, style = :style, imagePaintings = :imagePaintings WHERE idPaintings = '$id'";
 				//if-else statement in executing our query
@@ -28,7 +28,7 @@
 				$step->bindParam(':style',$style,PDO::PARAM_STR, 20);
 				$step->bindParam(':imagePaintings',$photo,PDO::PARAM_LOB);
 				if($step->execute()){
-				   $_SESSION['message'] = 'Paintings details updated as requested successfully';
+				   $_SESSION['message'] = 'Paintings details updated as requested successfully 11';
 				}
 				else{
 				$_SESSION['message']  = 'Not able to add data please contact Admin ';
@@ -44,7 +44,7 @@
 				$step->bindParam(':artistFK',$artistFK,PDO::PARAM_STR, 20);
 				$step->bindParam(':style',$style,PDO::PARAM_STR, 20);
 				if($step->execute()){
-				   $_SESSION['message'] = 'Paintings details updated as requested successfully';
+				   $_SESSION['message'] = 'Paintings details updated as requested successfully 22';
 				}
 				else{
 				$_SESSION['message']  = 'Not able to add data please contact Admin ';

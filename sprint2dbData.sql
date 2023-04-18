@@ -112,7 +112,7 @@ ALTER TABLE `artisttable`
 -- Constraints for table `paintingstable`
 --
 ALTER TABLE `paintingstable`
-  ADD CONSTRAINT `FK_artistName` FOREIGN KEY (`artistFK`) REFERENCES `artisttable` (`idArtist`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `FK_artistName` FOREIGN KEY (`artistFK`) REFERENCES `artisttable` (`idArtist`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
